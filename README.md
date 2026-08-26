@@ -71,6 +71,31 @@ code needs to change, since every file is a standard GeoJSON
 69) matches what's actually available (see the status table above; `v48`
 isn't available yet).
 
+## Experimental: single source of truth (`derived-from-v69/`)
+
+`v48/` and `v58/` are each sourced from a different upstream repo/vintage, so
+they can disagree on a boundary purely from snapshot timing, not an actual
+change on the ground. [`derived-from-v69/`](derived-from-v69/) explores
+deriving both directly from `v69` instead, using
+[`wilaya-hierarchy.json`](wilaya-hierarchy.json) (the full code → mother-code
+family tree across both reforms, sourced from official Journaux Officiels).
+This works because every wilaya ever carved out of an existing one was
+carved from exactly **one** mother wilaya — confirmed by an explicit field
+in the upstream metadata, not just geometry guessing.
+
+Cross-validated against the independently-sourced `v48/`/`v58/`: worst
+per-wilaya area discrepancy for v48 is 0.8%; for v58, two wilaya pairs (both
+from the 2019 reform) disagree on where their shared internal boundary
+runs but agree on their *combined* outer boundary to within 0.1% — see
+[`derived-from-v69/README.md`](derived-from-v69/README.md) for the full
+writeup. **Not yet used as a replacement** for `v48/`/`v58/` — kept side by
+side while this gets more validation.
+
+```bash
+npm run derive           # regenerate derived-from-v69/{v48,v58}.geojson from v69
+npm run cross-validate   # compare them against v48/ and v58/
+```
+
 ## Scripts
 
 - `node scripts/count-features.js` — validates every version listed in

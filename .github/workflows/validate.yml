@@ -15,8 +15,26 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Validate feature counts against versions.json
         run: node scripts/count-features.js
+
+      - name: Regenerate derived-from-v69 and check feature counts
+        run: |
+          npm run derive
+          node -e "
+            const fs = require('fs');
+            const v48 = JSON.parse(fs.readFileSync('derived-from-v69/v48.geojson'));
+            const v58 = JSON.parse(fs.readFileSync('derived-from-v69/v58.geojson'));
+            if (v48.features.length !== 48) throw new Error('derived v48: expected 48, got ' + v48.features.length);
+            if (v58.features.length !== 58) throw new Error('derived v58: expected 58, got ' + v58.features.length);
+            console.log('derived-from-v69: v48 OK (48), v58 OK (58)');
+          "
+
+      - name: Cross-validate derived-from-v69 against v48/v58 (informational)
+        run: node scripts/cross-validate-derived.js
 
       - name: Check ATTRIBUTION.md exists
         run: test -f ATTRIBUTION.md

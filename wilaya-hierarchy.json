@@ -1,0 +1,579 @@
+{
+  "source": "https://github.com/yasserstudio/geoalgeria (packages/dataset/data/wilayas.json)",
+  "reforms": [
+    {
+      "year": 1984,
+      "law": "Law 84-09, February 4, 1984",
+      "description": "Original 48 wilayas established"
+    },
+    {
+      "year": 2019,
+      "law": "Law 19-12, December 11, 2019",
+      "journal_officiel": "JO No. 78, December 18, 2019, p.13",
+      "description": "10 southern delegated wilayas promoted to full wilayas (49-58)"
+    },
+    {
+      "year": 2025,
+      "law": "Law 26-06, April 4, 2026",
+      "journal_officiel": "JO No. 25, April 5, 2026",
+      "announced": "2025-11-16",
+      "transition_end": "2026-12-31",
+      "full_autonomy": "2027-01-01",
+      "description": "11 Hauts Plateaux delegated wilayas promoted to full wilayas (59-69)"
+    }
+  ],
+  "wilayas": [
+    {
+      "code": 1,
+      "name_fr": "Adrar",
+      "name_ar": "أدرار",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 2,
+      "name_fr": "Chlef",
+      "name_ar": "الشلف",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 3,
+      "name_fr": "Laghouat",
+      "name_ar": "الأغواط",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 4,
+      "name_fr": "Oum El Bouaghi",
+      "name_ar": "أم البواقي",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 5,
+      "name_fr": "Batna",
+      "name_ar": "باتنة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 6,
+      "name_fr": "Béjaïa",
+      "name_ar": "بجاية",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 7,
+      "name_fr": "Biskra",
+      "name_ar": "بسكرة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 8,
+      "name_fr": "Béchar",
+      "name_ar": "بشار",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 9,
+      "name_fr": "Blida",
+      "name_ar": "البليدة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 10,
+      "name_fr": "Bouira",
+      "name_ar": "البويرة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 11,
+      "name_fr": "Tamanrasset",
+      "name_ar": "تمنراست",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 12,
+      "name_fr": "Tébessa",
+      "name_ar": "تبسة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 13,
+      "name_fr": "Tlemcen",
+      "name_ar": "تلمسان",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 14,
+      "name_fr": "Tiaret",
+      "name_ar": "تيارت",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 15,
+      "name_fr": "Tizi Ouzou",
+      "name_ar": "تيزي وزو",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 16,
+      "name_fr": "Alger",
+      "name_ar": "الجزائر",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 17,
+      "name_fr": "Djelfa",
+      "name_ar": "الجلفة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 18,
+      "name_fr": "Jijel",
+      "name_ar": "جيجل",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 19,
+      "name_fr": "Sétif",
+      "name_ar": "سطيف",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 20,
+      "name_fr": "Saïda",
+      "name_ar": "سعيدة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 21,
+      "name_fr": "Skikda",
+      "name_ar": "سكيكدة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 22,
+      "name_fr": "Sidi Bel Abbès",
+      "name_ar": "سيدي بلعباس",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 23,
+      "name_fr": "Annaba",
+      "name_ar": "عنابة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 24,
+      "name_fr": "Guelma",
+      "name_ar": "قالمة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 25,
+      "name_fr": "Constantine",
+      "name_ar": "قسنطينة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 26,
+      "name_fr": "Médéa",
+      "name_ar": "المدية",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 27,
+      "name_fr": "Mostaganem",
+      "name_ar": "مستغانم",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 28,
+      "name_fr": "M'sila",
+      "name_ar": "المسيلة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 29,
+      "name_fr": "Mascara",
+      "name_ar": "معسكر",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 30,
+      "name_fr": "Ouargla",
+      "name_ar": "ورقلة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 31,
+      "name_fr": "Oran",
+      "name_ar": "وهران",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 32,
+      "name_fr": "El Bayadh",
+      "name_ar": "البيض",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 33,
+      "name_fr": "Illizi",
+      "name_ar": "إليزي",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 34,
+      "name_fr": "Bordj Bou Arreridj",
+      "name_ar": "برج بوعريريج",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 35,
+      "name_fr": "Boumerdès",
+      "name_ar": "بومرداس",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 36,
+      "name_fr": "El Tarf",
+      "name_ar": "الطارف",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 37,
+      "name_fr": "Tindouf",
+      "name_ar": "تندوف",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 38,
+      "name_fr": "Tissemsilt",
+      "name_ar": "تيسمسيلت",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 39,
+      "name_fr": "El Oued",
+      "name_ar": "الوادي",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 40,
+      "name_fr": "Khenchela",
+      "name_ar": "خنشلة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 41,
+      "name_fr": "Souk Ahras",
+      "name_ar": "سوق أهراس",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 42,
+      "name_fr": "Tipaza",
+      "name_ar": "تيبازة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 43,
+      "name_fr": "Mila",
+      "name_ar": "ميلة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 44,
+      "name_fr": "Aïn Defla",
+      "name_ar": "عين الدفلى",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 45,
+      "name_fr": "Naâma",
+      "name_ar": "النعامة",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 46,
+      "name_fr": "Aïn Témouchent",
+      "name_ar": "عين تموشنت",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 47,
+      "name_fr": "Ghardaïa",
+      "name_ar": "غرداية",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 48,
+      "name_fr": "Relizane",
+      "name_ar": "غليزان",
+      "mother_code": null,
+      "created": 1984,
+      "law": null
+    },
+    {
+      "code": 49,
+      "name_fr": "Timimoun",
+      "name_ar": "تيميمون",
+      "mother_code": 1,
+      "created": 2019,
+      "law": "Law 19-12"
+    },
+    {
+      "code": 50,
+      "name_fr": "Bordj Badji Mokhtar",
+      "name_ar": "برج باجي مختار",
+      "mother_code": 1,
+      "created": 2019,
+      "law": "Law 19-12"
+    },
+    {
+      "code": 51,
+      "name_fr": "Ouled Djellal",
+      "name_ar": "أولاد جلال",
+      "mother_code": 7,
+      "created": 2019,
+      "law": "Law 19-12"
+    },
+    {
+      "code": 52,
+      "name_fr": "Béni Abbès",
+      "name_ar": "بني عباس",
+      "mother_code": 8,
+      "created": 2019,
+      "law": "Law 19-12"
+    },
+    {
+      "code": 53,
+      "name_fr": "In Salah",
+      "name_ar": "عين صالح",
+      "mother_code": 11,
+      "created": 2019,
+      "law": "Law 19-12"
+    },
+    {
+      "code": 54,
+      "name_fr": "In Guezzam",
+      "name_ar": "عين قزام",
+      "mother_code": 11,
+      "created": 2019,
+      "law": "Law 19-12"
+    },
+    {
+      "code": 55,
+      "name_fr": "Touggourt",
+      "name_ar": "توقرت",
+      "mother_code": 30,
+      "created": 2019,
+      "law": "Law 19-12"
+    },
+    {
+      "code": 56,
+      "name_fr": "Djanet",
+      "name_ar": "جانت",
+      "mother_code": 33,
+      "created": 2019,
+      "law": "Law 19-12"
+    },
+    {
+      "code": 57,
+      "name_fr": "El M'Ghair",
+      "name_ar": "المغير",
+      "mother_code": 39,
+      "created": 2019,
+      "law": "Law 19-12"
+    },
+    {
+      "code": 58,
+      "name_fr": "El Meniaa",
+      "name_ar": "المنيعة",
+      "mother_code": 47,
+      "created": 2019,
+      "law": "Law 19-12"
+    },
+    {
+      "code": 59,
+      "name_fr": "Aflou",
+      "name_ar": "آفلو",
+      "mother_code": 3,
+      "created": 2025,
+      "law": "Law 26-06"
+    },
+    {
+      "code": 60,
+      "name_fr": "Barika",
+      "name_ar": "بريكة",
+      "mother_code": 5,
+      "created": 2025,
+      "law": "Law 26-06"
+    },
+    {
+      "code": 61,
+      "name_fr": "El Kantara",
+      "name_ar": "القنطرة",
+      "mother_code": 7,
+      "created": 2025,
+      "law": "Law 26-06"
+    },
+    {
+      "code": 62,
+      "name_fr": "Bir El Ater",
+      "name_ar": "بئر العاتر",
+      "mother_code": 12,
+      "created": 2025,
+      "law": "Law 26-06"
+    },
+    {
+      "code": 63,
+      "name_fr": "El Aricha",
+      "name_ar": "العريشة",
+      "mother_code": 13,
+      "created": 2025,
+      "law": "Law 26-06"
+    },
+    {
+      "code": 64,
+      "name_fr": "Ksar Chellala",
+      "name_ar": "قصر الشلالة",
+      "mother_code": 14,
+      "created": 2025,
+      "law": "Law 26-06"
+    },
+    {
+      "code": 65,
+      "name_fr": "Aïn Oussera",
+      "name_ar": "عين وسارة",
+      "mother_code": 17,
+      "created": 2025,
+      "law": "Law 26-06"
+    },
+    {
+      "code": 66,
+      "name_fr": "Messaad",
+      "name_ar": "مسعد",
+      "mother_code": 17,
+      "created": 2025,
+      "law": "Law 26-06"
+    },
+    {
+      "code": 67,
+      "name_fr": "Ksar El Boukhari",
+      "name_ar": "قصر البخاري",
+      "mother_code": 26,
+      "created": 2025,
+      "law": "Law 26-06"
+    },
+    {
+      "code": 68,
+      "name_fr": "Bou Saâda",
+      "name_ar": "بوسعادة",
+      "mother_code": 28,
+      "created": 2025,
+      "law": "Law 26-06"
+    },
+    {
+      "code": 69,
+      "name_fr": "El Abiodh Sidi Cheikh",
+      "name_ar": "الأبيض سيدي الشيخ",
+      "mother_code": 32,
+      "created": 2025,
+      "law": "Law 26-06"
+    }
+  ]
+}

@@ -6,7 +6,9 @@
   "private": true,
   "scripts": {
     "test": "node scripts/count-features.js",
-    "update": "bash scripts/update-from-upstream.sh"
+    "update": "bash scripts/update-from-upstream.sh",
+    "derive": "node scripts/derive-versions.js",
+    "cross-validate": "node scripts/cross-validate-derived.js"
   },
   "repository": {
     "type": "git",
