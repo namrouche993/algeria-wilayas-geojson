@@ -1,12 +1,12 @@
 {
   "v48": {
     "label": "48 wilayas (pre-2019 layout)",
-    "file": null,
+    "file": "v48/all-wilayas.geojson",
     "expectedFeatures": 48,
-    "status": "blocked",
-    "license": "unknown",
-    "source": "https://github.com/fr33dz/Algeria-geojson",
-    "notes": "See v48/README.md — upstream source does not actually provide a 48-feature dataset."
+    "status": "available",
+    "license": "ODbL-1.0",
+    "source": "https://github.com/ZSmain/algeria-provinces-geojson",
+    "notes": "Derived: unions each post-2019 wilaya back into its pre-2019 parent. Regenerate with scripts/build-v48.js. See v48/README.md for methodology."
   },
   "v58": {
     "label": "58 wilayas (post-2019 layout)",

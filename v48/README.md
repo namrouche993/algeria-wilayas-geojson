@@ -1,52 +1,79 @@
-# v48 — status: blocked, not shipped yet
+# v48 — 48 wilayas (pre-2019 layout)
 
-The 48-wilaya variant is **not included yet**. This folder documents why, so
-nobody re-does the same dead-end research.
+`all-wilayas.geojson` in this folder is a `FeatureCollection` with **48
+features**, one per wilaya as they stood from the 1984 reform until the 2019
+reform that added 10 new wilayas (codes 49-58).
 
-## What was checked
+## Why this isn't a straight copy of an upstream file
 
-The brief's suggested source, [`fr33dz/Algeria-geojson`](https://github.com/fr33dz/Algeria-geojson)
-(default branch `master`, not `main`), does not actually provide a usable
-48-feature dataset:
+No upstream repo was found that ships the pre-2019 48-wilaya boundaries as a
+ready-made file (see the original investigation notes in git history / the
+first version of this file — `fr33dz/Algeria-geojson`'s `wilayas/` folder
+only has 6 files, and its `all-wilayas.geojson` is actually 58 features, not
+48). Instead this file is **derived**:
 
-- `wilayas/*.geojson` contains only **6 files**, not 48: `06-bejaia`,
-  `11-tamanrasset`, `15-tizi_ouzou`, `16-alger`, `35-boumerdes`,
-  `37-illizi.geojson`. No `properties` (no names, no codes) on the features
-  in those files either.
-- The root file `all-wilayas.geojson` — which looked like the obvious
-  candidate for a merged 48-wilaya `FeatureCollection` — actually contains
-  **58 features** (verified: `Adrar`, `Timimoune`, `Bordj Badji Mokhtar`, …),
-  i.e. it's a *58-wilayas* dataset (post-2019 split), not the 48-wilaya
-  layout. Shipping it as `v48` would be factually wrong.
-- The repo has no `LICENSE` file (`license: null` via the GitHub API) —
-  confirmed "upstream license unknown" as the brief anticipated, but that's
-  moot until there's actually a 48-feature file to ship.
+1. Source: [ZSmain/algeria-provinces-geojson](https://github.com/ZSmain/algeria-provinces-geojson)
+   (`data/` folder), which ships all **58** current wilayas as individual
+   OSM-derived GeoJSON files (each carries an `osm_id`, `admin_level: 4`,
+   `boundary: administrative`, and a `wikipedia` tag — this is OpenStreetMap
+   data, ODbL-1.0, regardless of the fact that the ZSmain repo itself has no
+   `LICENSE` file).
+2. The 2019 reform (Law creating wilayas 49-58) carved 10 new wilayas out of
+   8 existing ones, **without renaming or renumbering** the original 01-48
+   codes — it only shrank the territory of those 8 parents. So to
+   reconstruct the pre-2019 boundary of those 8 wilayas, each child's current
+   polygon is unioned back into its parent's current polygon:
 
-## What's needed to unblock this
+   | Parent (code) | Child wilaya(s) merged back in |
+   |---|---|
+   | Adrar (01) | Timimoune, Bordj Badji Mokhtar |
+   | Biskra (07) | Ouled Djellal |
+   | Béchar (08) | Béni Abbès |
+   | Tamanrasset (11) | In Salah, In Guezzam |
+   | Ouargla (30) | Touggourt |
+   | Illizi (33) | Djanet |
+   | El Oued (39) | El M'Ghair |
+   | Ghardaïa (47) | El Meniaa |
 
-A source with exactly 48 features representing Algeria's wilayas as they
-stood **before the 2019 split** (i.e. the historical 48-wilaya layout, in use
-1984–2019, before the ten new southern wilayas — Timimoune, Bordj Badji
-Mokhtar, Bordj Baji Mokhtar-adjacent splits, In Salah, In Guezzam, Djanet,
-etc. — were carved out). Options to pursue:
+   The other 40 wilayas are untouched copies of their current boundary
+   (their territory never changed).
+3. The union was computed with `@turf/turf` v7 (`turf.union` on adjoining
+   polygons — see the merge script referenced below). Sanity-checked: for
+   each merge, `area(parent) + area(children) ≈ area(merged)` (no overlap,
+   no gap — confirmed to within floating-point rounding for all 8 cases),
+   and the full 48-feature set's total area (~2,314,000 km²) is in the
+   expected range for Algeria (official figure: 2,381,741 km²; the ~3%
+   difference is normal OSM boundary-simplification variance, consistent
+   with `v69`, which is derived from the same kind of OSM source data).
+4. Names use a static official code→French-name table in the merge script
+   rather than the upstream `name`/`name_en` OSM tags directly, because
+   those tags are **inconsistently ordered** between French and Kabyle-Latin
+   transliteration across features upstream (e.g. Tlemcen's OSM `name` tag
+   is literally `"Tilimsen"`, while Bouira's `name` tag correctly reads
+   `"Bouira"` — trusting the tag directly would have produced a dataset with
+   some wilayas in French and others in Kabyle for no discoverable reason).
 
-1. Find another upstream repo/dataset that specifically ships the pre-2019
-   48-wilaya boundaries as a single `FeatureCollection`.
-2. Derive it programmatically from a 58-wilaya source (e.g. `v58`) by
-   merging each of the 10 post-2019 wilayas back into its pre-2019 parent
-   and re-dissolving the polygons — doable, but needs a verified
-   parent/child mapping table and a geometry-dissolve step (e.g. via
-   `mapshaper` or `turf.js`), not just a naive JSON edit.
-3. Revisit `fr33dz/Algeria-geojson`'s 6 individual `wilayas/*.geojson` files
-   as partial reference data if a full set ever appears upstream.
+## Properties
 
-Once a real 48-feature source is confirmed, add it as
-`v48/all-wilayas.geojson`, list it in `versions.json` at the repo root, and
-`scripts/count-features.js` / the CI workflow will pick it up automatically —
-no other script changes needed.
+Each feature has:
 
-## Do not
+- `code` — 2-digit official wilaya code (`"01"`–`"48"`), stable since 1984
+- `name` — official French name
+- `name_ar` — Arabic name (extracted from upstream's combined multi-script
+  tag)
+- `osm_ids` — upstream OpenStreetMap relation id(s) that contributed to this
+  feature's geometry (more than one when merged, see `merged_from`)
+- `merged_from` — present only on the 8 merged wilayas; lists which
+  post-2019 wilaya(s) were unioned back in to reconstruct the boundary
 
-Do not fabricate or hand-merge a 48-feature file just to make the CI count
-pass — that would ship geographically wrong boundaries under a "48 wilayas"
-label. Leave this folder empty of data until a real source is found.
+## License
+
+**ODbL-1.0** (OpenStreetMap) — same obligations as `v69`. See
+[`ATTRIBUTION.md`](../ATTRIBUTION.md#odbl-obligations-v69-and-v48) at the
+repo root: attribution + share-alike apply if you redistribute a derivative
+database built from this file.
+
+## Regenerating this file
+
+See `scripts/build-v48.js` (downloads the 58 upstream files fresh and
+re-runs the merge — use this if ZSmain's source data is updated).

@@ -5,7 +5,7 @@ in three variants so you can pick the layout that matches your data:
 
 | Version | Wilayas | File | Status | License |
 |---|---|---|---|---|
-| v48 | 48 (pre-2019 layout) | — | **not shipped yet** — see [`v48/README.md`](v48/README.md) | unknown |
+| v48 | 48 (pre-2019 layout) | [`v48/all-wilayas.geojson`](v48/all-wilayas.geojson) | available (derived, see [`v48/README.md`](v48/README.md)) | ODbL-1.0 (OSM-derived) |
 | v58 | 58 (post-2019 layout) | [`v58/algeria-cities.geojson`](v58/algeria-cities.geojson) | available | MIT |
 | v69 | 69 (2025/2026 reform layout) | [`v69/wilaya-boundaries.geojson`](v69/wilaya-boundaries.geojson) | available | ODbL-1.0 (OSM-derived) |
 
@@ -13,12 +13,14 @@ Full source/license table: see [`ATTRIBUTION.md`](ATTRIBUTION.md). Machine-reada
 manifest (used by the scripts and CI): [`versions.json`](versions.json).
 
 **License notice:** these are not one uniform license. `v58` and the optional
-`v69` SVG are MIT. `v69`'s boundary GeoJSON is derived from OpenStreetMap
-under **ODbL-1.0**, which requires attribution and share-alike on
-redistributed derivative databases — read
-[ATTRIBUTION.md](ATTRIBUTION.md#odbl-obligations-v69) before shipping it in a
-product. `v48` isn't included because no upstream source with an actual
-48-feature dataset was found — see [`v48/README.md`](v48/README.md).
+`v69` SVG are MIT. `v69` and `v48`'s boundary GeoJSON are derived from
+OpenStreetMap under **ODbL-1.0**, which requires attribution and
+share-alike on redistributed derivative databases — read
+[ATTRIBUTION.md](ATTRIBUTION.md#odbl-obligations-v69-and-v48) before
+shipping either in a product. `v48` is not a straight copy of an upstream
+file — no repo ships the pre-2019 boundaries directly, so it's
+reconstructed from a 58-wilaya source; see
+[`v48/README.md`](v48/README.md) for the full methodology.
 
 ## Usage
 
@@ -75,7 +77,11 @@ isn't available yet).
   `versions.json` against its expected feature count. Run standalone against
   one file: `node scripts/count-features.js v58/algeria-cities.geojson 58`.
 - `bash scripts/update-from-upstream.sh [v58|v69|all]` — re-downloads the
-  tracked files from their upstream sources and re-validates them.
+  tracked v58/v69 files from their upstream sources and re-validates them.
+- `node scripts/build-v48.js` — regenerates `v48/all-wilayas.geojson` from
+  its upstream 58-wilaya source (requires `npm install` first, since it
+  needs `@turf/turf` for the geometry union — see
+  [`v48/README.md`](v48/README.md) for why v48 is derived rather than copied).
 
 ```bash
 npm test     # same as: node scripts/count-features.js

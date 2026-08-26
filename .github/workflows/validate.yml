@@ -26,6 +26,11 @@ jobs:
           test -f v58/LICENSE
           test -f v69/LICENSE-svg
 
+      - name: Check v48 derivation docs are present
+        run: |
+          test -f v48/README.md
+          test -f scripts/build-v48.js
+
       - name: Lint all tracked GeoJSON files as valid JSON
         run: |
           shopt -s globstar nullglob

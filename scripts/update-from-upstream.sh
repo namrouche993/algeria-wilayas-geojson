@@ -31,13 +31,13 @@ update_v69() {
 case "$target" in
   v58) update_v58 ;;
   v69) update_v69 ;;
-  all) update_v58; update_v69 ;;
   v48)
-    echo "v48 is not shippable yet — see v48/README.md (upstream has no valid 48-feature dataset)." >&2
+    echo "v48 is derived, not downloaded directly — run: node scripts/build-v48.js (see v48/README.md)." >&2
     exit 1
     ;;
+  all) update_v58; update_v69 ;;
   *)
-    echo "Unknown target: $target (expected v58, v69, or all)" >&2
+    echo "Unknown target: $target (expected v58, v69, or all; for v48 run node scripts/build-v48.js)" >&2
     exit 1
     ;;
 esac

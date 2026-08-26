@@ -11,5 +11,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/namrouche993/algeria-wilayas-geojson"
+  },
+  "devDependencies": {
+    "@turf/turf": "^7.4.0"
   }
 }
