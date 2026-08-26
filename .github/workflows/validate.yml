@@ -1,0 +1,35 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate feature counts against versions.json
+        run: node scripts/count-features.js
+
+      - name: Check ATTRIBUTION.md exists
+        run: test -f ATTRIBUTION.md
+
+      - name: Check upstream LICENSE is present for each MIT-sourced file
+        run: |
+          test -f v58/LICENSE
+          test -f v69/LICENSE-svg
+
+      - name: Lint all tracked GeoJSON files as valid JSON
+        run: |
+          shopt -s globstar nullglob
+          for f in v*/**/*.geojson; do
+            echo "Checking $f"
+            node -e "JSON.parse(require('fs').readFileSync('$f'))"
+          done

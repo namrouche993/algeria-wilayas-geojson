@@ -1,0 +1,37 @@
+{
+  "v48": {
+    "label": "48 wilayas (pre-2019 layout)",
+    "file": null,
+    "expectedFeatures": 48,
+    "status": "blocked",
+    "license": "unknown",
+    "source": "https://github.com/fr33dz/Algeria-geojson",
+    "notes": "See v48/README.md — upstream source does not actually provide a 48-feature dataset."
+  },
+  "v58": {
+    "label": "58 wilayas (post-2019 layout)",
+    "file": "v58/algeria-cities.geojson",
+    "expectedFeatures": 58,
+    "status": "available",
+    "license": "MIT",
+    "licenseFile": "v58/LICENSE",
+    "source": "https://github.com/samdace/Algeria-Cities-GeoJson"
+  },
+  "v69": {
+    "label": "69 wilayas (2025/2026 reform layout)",
+    "file": "v69/wilaya-boundaries.geojson",
+    "expectedFeatures": 69,
+    "status": "available",
+    "license": "ODbL-1.0",
+    "source": "https://github.com/yasserstudio/geoalgeria",
+    "notes": "Boundary geometry is OSM-derived (ODbL). See ATTRIBUTION.md for share-alike obligations.",
+    "optionalAssets": [
+      {
+        "file": "v69/map-algeria-69-wilayas.svg",
+        "license": "MIT",
+        "licenseFile": "v69/LICENSE-svg",
+        "source": "https://github.com/chemsallioua/Algeria69WilayaMap"
+      }
+    ]
+  }
+}
