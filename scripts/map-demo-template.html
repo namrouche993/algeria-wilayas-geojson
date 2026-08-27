@@ -1,0 +1,428 @@
+<title>Wilayas d'Algérie</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1: #fcfcfb;
+    --page-plane: #f9f9f7;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #898781;
+    --gridline: #e1e0d9;
+    --border: rgba(11, 11, 11, 0.10);
+    --cat-original: #2a78d6;
+    --cat-mother: #eb6834;
+    --cat-child: #1baf7a;
+    --seq-100: #cde2fb; --seq-200: #9ec5f4; --seq-300: #6da7ec;
+    --seq-400: #3987e5; --seq-500: #256abf; --seq-600: #184f95; --seq-700: #0d366b;
+    --map-stroke: #ffffff;
+    --focus-ring: #184f95;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --surface-1: #1a1a19;
+      --page-plane: #0d0d0d;
+      --text-primary: #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted: #898781;
+      --gridline: #2c2c2a;
+      --border: rgba(255, 255, 255, 0.10);
+      --cat-original: #3987e5;
+      --cat-mother: #d95926;
+      --cat-child: #199e70;
+      --map-stroke: #1a1a19;
+      --focus-ring: #86b6ef;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --page-plane: #0d0d0d;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #898781;
+    --gridline: #2c2c2a;
+    --border: rgba(255, 255, 255, 0.10);
+    --cat-original: #3987e5;
+    --cat-mother: #d95926;
+    --cat-child: #199e70;
+    --map-stroke: #1a1a19;
+    --focus-ring: #86b6ef;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page-plane);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 20px 56px; }
+  header.page-head { margin-bottom: 20px; }
+  h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+  .subtitle { color: var(--text-secondary); font-size: 0.92rem; margin: 4px 0 0; }
+
+  /* radio switch */
+  fieldset.res-switch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 0 18px;
+  }
+  fieldset.res-switch legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  fieldset.res-switch label {
+    position: relative;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 9px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  fieldset.res-switch label:has(input:checked) { background: var(--cat-original); color: #ffffff; }
+  fieldset.res-switch label:has(input:focus-visible) { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+  fieldset.res-switch input { position: absolute; opacity: 0; pointer-events: none; }
+  fieldset.res-switch label span.era { opacity: 0.7; font-weight: 500; }
+
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(300px, 1fr);
+    gap: 18px;
+    align-items: start;
+  }
+  @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+
+  .map-card, .side-card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .map-card { padding: 14px 14px 10px; }
+  svg#map { width: 100%; height: auto; display: block; }
+  path.wilaya {
+    stroke: var(--map-stroke);
+    stroke-width: 1px;
+    vector-effect: non-scaling-stroke;
+    fill-rule: evenodd;
+    cursor: pointer;
+  }
+  path.wilaya.dimmed { opacity: 0.35; }
+  path.wilaya.hovered { stroke: var(--focus-ring); }
+
+  .legend { display: flex; align-items: center; gap: 10px; padding: 10px 4px 4px; font-size: 0.76rem; color: var(--text-secondary); flex-wrap: wrap; }
+  .legend-gradient { height: 10px; width: 150px; border-radius: 5px; background: linear-gradient(to right, var(--seq-100), var(--seq-700)); border: 1px solid var(--border); }
+  .legend-roles { display: flex; gap: 12px; flex-wrap: wrap; margin-inline-start: auto; }
+  .legend-swatch { display: inline-flex; align-items: center; gap: 5px; }
+  .legend-swatch .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+
+  .side-card { padding: 14px; display: flex; flex-direction: column; gap: 12px; height: 660px; min-height: 0; }
+  .detail-panel { flex: none; border: 1px solid var(--border); border-radius: 9px; padding: 12px; min-height: 172px; }
+  .detail-empty { color: var(--text-muted); font-size: 0.84rem; }
+  .detail-name { font-size: 1.05rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .detail-ar { color: var(--text-secondary); font-size: 0.9rem; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .detail-stats { display: flex; gap: 16px; margin-top: 8px; }
+  .detail-stat b { display: block; font-size: 1.1rem; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+  .detail-stat span { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.02em; }
+  .role-badge { display: inline-flex; align-items: center; gap: 5px; margin-top: 9px; padding: 3px 9px; border-radius: 999px; font-size: 0.74rem; font-weight: 700; color: #ffffff; }
+  .role-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #ffffff; opacity: 0.85; }
+  .status-rows { margin-top: 10px; border-top: 1px solid var(--gridline); padding-top: 8px; display: flex; flex-direction: column; gap: 5px; }
+  .status-row { display: flex; gap: 8px; font-size: 0.8rem; color: var(--text-secondary); align-items: baseline; }
+  .status-row .res-tag { flex: none; width: 3.4em; font-weight: 700; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+  .status-row b { color: var(--text-primary); }
+
+  .list-wrap { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  .list-head { display: flex; justify-content: space-between; flex: none; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-muted); padding: 0 8px 6px; gap: 8px; }
+  .list-head .stat-heads { display: flex; gap: 14px; }
+  ol.wilaya-list { list-style: none; margin: 0; padding: 0; flex: 1; min-height: 0; overflow-y: auto; border-top: 1px solid var(--gridline); }
+  ol.wilaya-list li { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-bottom: 1px solid var(--gridline); cursor: pointer; font-size: 0.83rem; }
+  ol.wilaya-list li:hover, ol.wilaya-list li.hovered { background: var(--page-plane); }
+  ol.wilaya-list li .swatch { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+  ol.wilaya-list li .role-dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+  ol.wilaya-list li .nm-block { flex: 1; min-width: 0; display: flex; flex-direction: column; overflow: hidden; }
+  ol.wilaya-list li .nm-fr { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+  ol.wilaya-list li .nm-ar { font-size: 0.76rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+  ol.wilaya-list li .stats { display: flex; gap: 14px; flex: none; }
+  ol.wilaya-list li .stats b { color: var(--text-secondary); font-variant-numeric: tabular-nums; font-size: 0.82rem; font-weight: 600; min-width: 1.6em; text-align: right; display: inline-block; }
+
+  footer.page-foot { margin-top: 22px; color: var(--text-muted); font-size: 0.76rem; line-height: 1.6; }
+  footer.page-foot a { color: inherit; }
+</style>
+
+<div class="wrap">
+  <header class="page-head">
+    <h1>L'Algérie en wilayas — 48, 58, 69</h1>
+    <p class="subtitle">Une seule source (v69 + généalogie officielle) : 48 et 58 sont reconstruits par fusion, pas re-téléchargés séparément. Statut mère / fille détaillé pour chaque résolution en barre latérale.</p>
+  </header>
+
+  <fieldset class="res-switch" id="res-switch">
+    <legend>Résolution</legend>
+    <label><input type="radio" name="res" value="48"><span>48 wilayas</span> <span class="era">— 1984–2019</span></label>
+    <label><input type="radio" name="res" value="58"><span>58 wilayas</span> <span class="era">— 2019–2026</span></label>
+    <label><input type="radio" name="res" value="69" checked><span>69 wilayas</span> <span class="era">— depuis 2026</span></label>
+  </fieldset>
+
+  <div class="layout">
+    <div class="map-card">
+      <svg id="map" viewBox="0 0 100 100" role="img" aria-label="Carte des wilayas d'Algérie"></svg>
+      <div class="legend" id="legend"></div>
+    </div>
+
+    <div class="side-card">
+      <div class="detail-panel" id="detail">
+        <div class="detail-empty">Survolez ou touchez une wilaya sur la carte ou dans la liste.</div>
+      </div>
+      <div class="list-wrap">
+        <div class="list-head">
+          <span>Wilaya</span>
+          <span class="stat-heads"><span>Communes</span><span>Daïras</span></span>
+        </div>
+        <ol class="wilaya-list" id="list"></ol>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-foot">
+    Une seule source de vérité : <code>v69/wilaya-boundaries.geojson</code> (ODbL / OpenStreetMap) + <code>wilaya-hierarchy.json</code>
+    (généalogie officielle, lois 19-12 et 26-06). Les vues 48 et 58 sont calculées en fusionnant chaque wilaya née d'une réforme
+    dans sa wilaya-mère — rien n'est re-téléchargé séparément. Géométries simplifiées à des fins d'affichage
+    (tolérance ~800&nbsp;m, écart de superficie &lt;0,1&nbsp;%). Dépôt :
+    <a href="https://github.com/namrouche993/algeria-wilayas-geojson" target="_blank" rel="noopener">algeria-wilayas-geojson</a> — voir ATTRIBUTION.md.
+  </footer>
+</div>
+
+<script type="application/json" id="mapdata">__MAP_DATA_JSON__</script>
+<script>
+(function () {
+  "use strict";
+  const DATA = JSON.parse(document.getElementById("mapdata").textContent);
+  const hierByCode = new Map(DATA.hierarchy.map((w) => [w.code, w]));
+
+  const CAT_COLOR = (cssVar) => getComputedStyle(document.documentElement).getPropertyValue(cssVar).trim();
+  const SEQ_STEPS = ["--seq-100", "--seq-200", "--seq-300", "--seq-400", "--seq-500", "--seq-600", "--seq-700"];
+  const ROLE_META = {
+    original: { label: "D'origine (non affectée)", varName: "--cat-original" },
+    mother: { label: "Mère (a cédé du territoire)", varName: "--cat-mother" },
+    "child-2019": { label: "Née d'une réforme (fille)", varName: "--cat-child" },
+    "child-2026": { label: "Née d'une réforme (fille)", varName: "--cat-child" },
+  };
+
+  // ---- mirrors scripts/build-map-demo-data.js's grouping logic, for the
+  // live "status at 48 / 58 / 69" breakdown in the detail panel ----
+  function directMother(code) { return hierByCode.get(code)?.mother_code ?? null; }
+  function rootAncestor(code) {
+    let current = code;
+    while (true) {
+      const m = directMother(current);
+      if (m == null) return current;
+      current = m;
+    }
+  }
+  function groupFn(res, code) {
+    if (res === 48) return rootAncestor(code);
+    if (res === 58) return (code <= 58 ? code : directMother(code));
+    return code;
+  }
+  function roleAtResolution(res, targetCode) {
+    const absorbs = DATA.hierarchy.some((w) => w.code !== targetCode && groupFn(res, w.code) === targetCode);
+    if (absorbs) return "mother";
+    const w = hierByCode.get(targetCode);
+    if (w.mother_code != null) return w.created >= 2025 ? "child-2026" : "child-2019";
+    return "original";
+  }
+  function statusAt(res, code) {
+    const target = groupFn(res, code);
+    if (target !== code) {
+      return { absorbed: true, into: hierByCode.get(target).name_fr };
+    }
+    const role = roleAtResolution(res, code);
+    const childrenNames = DATA.hierarchy
+      .filter((w) => w.code !== code && groupFn(res, w.code) === code)
+      .map((w) => w.name_fr);
+    return { absorbed: false, role, childrenNames, created: hierByCode.get(code).created, law: hierByCode.get(code).law };
+  }
+
+  // ---- projection: equirectangular, centered on the country, shared across all resolutions ----
+  let project, viewBoxStr;
+  (function computeProjection() {
+    const ref = DATA.res69.features;
+    let minLon = Infinity, maxLon = -Infinity, minLat = Infinity, maxLat = -Infinity;
+    for (const f of ref) {
+      const polys = f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.coordinates;
+      for (const poly of polys) for (const ring of poly) for (const [lon, lat] of ring) {
+        if (lon < minLon) minLon = lon; if (lon > maxLon) maxLon = lon;
+        if (lat < minLat) minLat = lat; if (lat > maxLat) maxLat = lat;
+      }
+    }
+    const meanLatRad = ((minLat + maxLat) / 2) * Math.PI / 180;
+    const cosLat = Math.cos(meanLatRad);
+    project = (lon, lat) => [lon * cosLat, -lat];
+
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    for (const f of ref) {
+      const polys = f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.coordinates;
+      for (const poly of polys) for (const ring of poly) for (const [lon, lat] of ring) {
+        const [x, y] = project(lon, lat);
+        if (x < minX) minX = x; if (x > maxX) maxX = x;
+        if (y < minY) minY = y; if (y > maxY) maxY = y;
+      }
+    }
+    const pad = (maxX - minX) * 0.03;
+    viewBoxStr = `${minX - pad} ${minY - pad} ${maxX - minX + 2 * pad} ${maxY - minY + 2 * pad}`;
+  })();
+
+  function pathFromGeometry(geom) {
+    const polys = geom.type === "Polygon" ? [geom.coordinates] : geom.coordinates;
+    let d = "";
+    for (const poly of polys) for (const ring of poly) {
+      d += ring.map(([lon, lat], i) => {
+        const [x, y] = project(lon, lat);
+        return `${i === 0 ? "M" : "L"}${x.toFixed(3)},${y.toFixed(3)}`;
+      }).join("") + "Z";
+    }
+    return d;
+  }
+
+  const svg = document.getElementById("map");
+  svg.setAttribute("viewBox", viewBoxStr);
+
+  const legendEl = document.getElementById("legend");
+  const listEl = document.getElementById("list");
+  const detailEl = document.getElementById("detail");
+
+  const fmtInt = (n) => n.toLocaleString("fr-FR");
+  const codeStr = (code) => String(code).padStart(2, "0");
+
+  function colorForValue(value, breaks) {
+    let idx = breaks.findIndex((b) => value <= b);
+    if (idx === -1) idx = SEQ_STEPS.length - 1;
+    return CAT_COLOR(SEQ_STEPS[Math.min(idx, SEQ_STEPS.length - 1)]);
+  }
+  function computeBreaks(features) {
+    const vals = features.map((f) => f.communes_count);
+    const lo = Math.min(...vals), hi = Math.max(...vals);
+    const n = SEQ_STEPS.length;
+    return Array.from({ length: n }, (_, i) => lo + ((i + 1) / n) * (hi - lo));
+  }
+
+  function renderLegend(features) {
+    legendEl.innerHTML = "";
+    const counts = features.map((f) => f.communes_count);
+    const label = document.createElement("span"); label.textContent = "Nombre de communes :";
+    const lo = document.createElement("span"); lo.textContent = fmtInt(Math.min(...counts));
+    const grad = document.createElement("div"); grad.className = "legend-gradient";
+    const hi = document.createElement("span"); hi.textContent = fmtInt(Math.max(...counts));
+    legendEl.append(label, lo, grad, hi);
+
+    const roles = document.createElement("div");
+    roles.className = "legend-roles";
+    for (const key of ["original", "mother", "child-2019"]) {
+      const s = document.createElement("span");
+      s.className = "legend-swatch";
+      s.innerHTML = `<span class="dot" style="background:${CAT_COLOR(ROLE_META[key].varName)}"></span>${ROLE_META[key].label}`;
+      roles.appendChild(s);
+    }
+    legendEl.appendChild(roles);
+  }
+
+  function statusRowHtml(res, code) {
+    const st = statusAt(res, code);
+    if (st.absorbed) {
+      return `<div class="status-row"><span class="res-tag">${res}</span>fait partie de <b>${st.into}</b></div>`;
+    }
+    const meta = ROLE_META[st.role];
+    let text;
+    if (st.role === "mother") {
+      text = `mère de <b>${st.childrenNames.join(", ")}</b>`;
+    } else if (st.role === "child-2019" || st.role === "child-2026") {
+      text = `née en <b>${st.created}</b> (${st.law})`;
+    } else {
+      text = "inchangée depuis 1984";
+    }
+    return `<div class="status-row"><span class="res-tag">${res}</span>${text}</div>`;
+  }
+
+  function showDetail(f, res) {
+    if (!f) {
+      detailEl.innerHTML = '<div class="detail-empty">Survolez ou touchez une wilaya sur la carte ou dans la liste.</div>';
+      return;
+    }
+    const frLabel = codeStr(f.code) + "-" + f.name;
+    let html = `<div class="detail-name">${frLabel}</div>`;
+    if (f.name_ar) {
+      const arLabel = codeStr(f.code) + "-" + f.name_ar;
+      html += `<div class="detail-ar" dir="rtl">${arLabel}</div>`;
+    }
+    html += `<div class="detail-stats">
+      <div class="detail-stat"><b>${fmtInt(f.communes_count)}</b><span>communes</span></div>
+      <div class="detail-stat"><b>${fmtInt(f.dairas_count)}</b><span>daïras</span></div>
+    </div>`;
+    const meta = ROLE_META[f.role];
+    html += `<span class="role-badge" style="background:${CAT_COLOR(meta.varName)}"><span class="dot"></span>${meta.label} — vue ${res}</span>`;
+    html += '<div class="status-rows">';
+    for (const r of [48, 58, 69]) html += statusRowHtml(r, f.code);
+    html += "</div>";
+    detailEl.innerHTML = html;
+  }
+
+  function setHover(code) {
+    document.querySelectorAll("path.wilaya").forEach((p) => {
+      const match = code == null || Number(p.dataset.code) === code;
+      p.classList.toggle("hovered", code != null && match);
+      p.classList.toggle("dimmed", code != null && !match);
+    });
+    document.querySelectorAll("#list li").forEach((li) => {
+      li.classList.toggle("hovered", code != null && Number(li.dataset.code) === code);
+    });
+  }
+
+  function render(res) {
+    const features = DATA["res" + res].features;
+    const breaks = computeBreaks(features);
+
+    svg.innerHTML = "";
+    for (const f of features) {
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", pathFromGeometry(f.geometry));
+      path.setAttribute("class", "wilaya");
+      path.dataset.code = f.code;
+      path.setAttribute("fill", colorForValue(f.communes_count, breaks));
+      path.addEventListener("mouseenter", () => { setHover(f.code); showDetail(f, res); });
+      path.addEventListener("mouseleave", () => setHover(null));
+      path.addEventListener("click", () => showDetail(f, res));
+      svg.appendChild(path);
+    }
+
+    listEl.innerHTML = "";
+    for (const f of features) {
+      const li = document.createElement("li");
+      li.dataset.code = f.code;
+      const fill = colorForValue(f.communes_count, breaks);
+      const roleColor = CAT_COLOR(ROLE_META[f.role].varName);
+      const frLabel = codeStr(f.code) + "-" + f.name;
+      const arLabel = f.name_ar ? (codeStr(f.code) + "-" + f.name_ar) : "";
+      li.innerHTML = `<span class="swatch" style="background:${fill}"></span>` +
+        `<span class="role-dot" style="background:${roleColor}" title="${ROLE_META[f.role].label}"></span>` +
+        `<span class="nm-block"><span class="nm-fr">${frLabel}</span><span class="nm-ar" dir="rtl">${arLabel}</span></span>` +
+        `<span class="stats"><b>${fmtInt(f.communes_count)}</b><b>${fmtInt(f.dairas_count)}</b></span>`;
+      li.addEventListener("mouseenter", () => { setHover(f.code); showDetail(f, res); });
+      li.addEventListener("mouseleave", () => setHover(null));
+      li.addEventListener("click", () => showDetail(f, res));
+      listEl.appendChild(li);
+    }
+
+    renderLegend(features);
+    showDetail(null, res);
+  }
+
+  document.querySelectorAll('input[name="res"]').forEach((r) => {
+    r.addEventListener("change", () => render(Number(r.value)));
+  });
+
+  render(69);
+})();
+</script>

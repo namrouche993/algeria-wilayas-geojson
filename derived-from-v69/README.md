@@ -62,17 +62,31 @@ against the independently-sourced `v48/all-wilayas.geojson` and
 
 Re-run the check any time with `node scripts/cross-validate-derived.js`.
 
-## Next steps
+## Visual check
 
-Before replacing `v48/`/`v58/` with these derived files:
+[`examples/map-demo.html`](../examples/map-demo.html) is a self-contained
+interactive page built entirely from `v69/wilaya-boundaries.geojson` +
+`wilaya-hierarchy.json` — the 48/58/69 radio switch renders each resolution
+by merging pieces of the *same* source live, and clicking any wilaya shows
+its status at all three resolutions at once (e.g. Biskra: mother of Ouled
+Djellal + El Kantara at 48, mother of El Kantara only at 58, unchanged at
+69). Regenerate it with `node scripts/build-map-demo-data.js` then splice
+the output into `scripts/map-demo-template.html` (see the script's header
+comment). This is the eyeball check that item 2 below used to call for.
+
+## Status: kept deliberately as-is
+
+Per-repo decision (2026-08-27): `v48/` and `v58/` stay independently sourced
+for now — this technique is not replacing them. The point that matters is
+already proven and shipped: **one canonical file (`v69`) plus one genealogy
+manifest (`wilaya-hierarchy.json`) is enough to reconstruct any coarser
+resolution on demand**, which is what `examples/map-demo.html` demonstrates
+end-to-end. If that ever changes:
 
 1. Decide how to handle the Ghardaïa/El Meniaa and Ouargla/Touggourt
    internal-line disagreement (most likely: trust geoalgeria's v69 line,
    since it's the more recently maintained, actively-validated-by-CI source
    per its own README).
-2. Get a second opinion/eyeball check on a rendered map, not just area
-   percentages — a boundary can match on area while still being drawn in
-   the wrong place.
-3. Once comfortable, `v48/README.md` and `v58` docs can point here instead,
+2. Once comfortable, `v48/README.md` and `v58` docs can point here instead,
    and the separately-fetched upstream copies can be dropped in favor of
    always regenerating from `v69` + `wilaya-hierarchy.json`.

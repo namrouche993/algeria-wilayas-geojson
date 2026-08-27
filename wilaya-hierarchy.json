@@ -29,7 +29,9 @@
       "name_ar": "أدرار",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 16,
+      "dairas_count": 6
     },
     {
       "code": 2,
@@ -37,7 +39,9 @@
       "name_ar": "الشلف",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 35,
+      "dairas_count": 13
     },
     {
       "code": 3,
@@ -45,7 +49,9 @@
       "name_ar": "الأغواط",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 12,
+      "dairas_count": 5
     },
     {
       "code": 4,
@@ -53,7 +59,9 @@
       "name_ar": "أم البواقي",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 29,
+      "dairas_count": 12
     },
     {
       "code": 5,
@@ -61,7 +69,9 @@
       "name_ar": "باتنة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 53,
+      "dairas_count": 18
     },
     {
       "code": 6,
@@ -69,7 +79,9 @@
       "name_ar": "بجاية",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 52,
+      "dairas_count": 19
     },
     {
       "code": 7,
@@ -77,7 +89,9 @@
       "name_ar": "بسكرة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 22,
+      "dairas_count": 7
     },
     {
       "code": 8,
@@ -85,7 +99,9 @@
       "name_ar": "بشار",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 11,
+      "dairas_count": 6
     },
     {
       "code": 9,
@@ -93,7 +109,9 @@
       "name_ar": "البليدة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 25,
+      "dairas_count": 10
     },
     {
       "code": 10,
@@ -101,7 +119,9 @@
       "name_ar": "البويرة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 45,
+      "dairas_count": 12
     },
     {
       "code": 11,
@@ -109,7 +129,9 @@
       "name_ar": "تمنراست",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 5,
+      "dairas_count": 3
     },
     {
       "code": 12,
@@ -117,7 +139,9 @@
       "name_ar": "تبسة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 24,
+      "dairas_count": 10
     },
     {
       "code": 13,
@@ -125,7 +149,9 @@
       "name_ar": "تلمسان",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 49,
+      "dairas_count": 19
     },
     {
       "code": 14,
@@ -133,7 +159,9 @@
       "name_ar": "تيارت",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 36,
+      "dairas_count": 12
     },
     {
       "code": 15,
@@ -141,7 +169,9 @@
       "name_ar": "تيزي وزو",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 67,
+      "dairas_count": 21
     },
     {
       "code": 16,
@@ -149,7 +179,9 @@
       "name_ar": "الجزائر",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 57,
+      "dairas_count": 13
     },
     {
       "code": 17,
@@ -157,7 +189,9 @@
       "name_ar": "الجلفة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 18,
+      "dairas_count": 6
     },
     {
       "code": 18,
@@ -165,7 +199,9 @@
       "name_ar": "جيجل",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 28,
+      "dairas_count": 11
     },
     {
       "code": 19,
@@ -173,7 +209,9 @@
       "name_ar": "سطيف",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 60,
+      "dairas_count": 20
     },
     {
       "code": 20,
@@ -181,7 +219,9 @@
       "name_ar": "سعيدة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 16,
+      "dairas_count": 6
     },
     {
       "code": 21,
@@ -189,7 +229,9 @@
       "name_ar": "سكيكدة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 38,
+      "dairas_count": 13
     },
     {
       "code": 22,
@@ -197,7 +239,9 @@
       "name_ar": "سيدي بلعباس",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 52,
+      "dairas_count": 15
     },
     {
       "code": 23,
@@ -205,7 +249,9 @@
       "name_ar": "عنابة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 12,
+      "dairas_count": 6
     },
     {
       "code": 24,
@@ -213,7 +259,9 @@
       "name_ar": "قالمة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 34,
+      "dairas_count": 10
     },
     {
       "code": 25,
@@ -221,7 +269,9 @@
       "name_ar": "قسنطينة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 12,
+      "dairas_count": 7
     },
     {
       "code": 26,
@@ -229,7 +279,9 @@
       "name_ar": "المدية",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 43,
+      "dairas_count": 13
     },
     {
       "code": 27,
@@ -237,7 +289,9 @@
       "name_ar": "مستغانم",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 32,
+      "dairas_count": 10
     },
     {
       "code": 28,
@@ -245,7 +299,9 @@
       "name_ar": "المسيلة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 24,
+      "dairas_count": 7
     },
     {
       "code": 29,
@@ -253,7 +309,9 @@
       "name_ar": "معسكر",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 47,
+      "dairas_count": 16
     },
     {
       "code": 30,
@@ -261,7 +319,9 @@
       "name_ar": "ورقلة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 8,
+      "dairas_count": 5
     },
     {
       "code": 31,
@@ -269,7 +329,9 @@
       "name_ar": "وهران",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 26,
+      "dairas_count": 9
     },
     {
       "code": 32,
@@ -277,7 +339,9 @@
       "name_ar": "البيض",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 15,
+      "dairas_count": 5
     },
     {
       "code": 33,
@@ -285,7 +349,9 @@
       "name_ar": "إليزي",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 4,
+      "dairas_count": 4
     },
     {
       "code": 34,
@@ -293,7 +359,9 @@
       "name_ar": "برج بوعريريج",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 34,
+      "dairas_count": 10
     },
     {
       "code": 35,
@@ -301,7 +369,9 @@
       "name_ar": "بومرداس",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 32,
+      "dairas_count": 9
     },
     {
       "code": 36,
@@ -309,7 +379,9 @@
       "name_ar": "الطارف",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 24,
+      "dairas_count": 7
     },
     {
       "code": 37,
@@ -317,7 +389,9 @@
       "name_ar": "تندوف",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 2,
+      "dairas_count": 1
     },
     {
       "code": 38,
@@ -325,7 +399,9 @@
       "name_ar": "تيسمسيلت",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 22,
+      "dairas_count": 8
     },
     {
       "code": 39,
@@ -333,7 +409,9 @@
       "name_ar": "الوادي",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 22,
+      "dairas_count": 10
     },
     {
       "code": 40,
@@ -341,7 +419,9 @@
       "name_ar": "خنشلة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 21,
+      "dairas_count": 8
     },
     {
       "code": 41,
@@ -349,7 +429,9 @@
       "name_ar": "سوق أهراس",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 26,
+      "dairas_count": 10
     },
     {
       "code": 42,
@@ -357,7 +439,9 @@
       "name_ar": "تيبازة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 28,
+      "dairas_count": 10
     },
     {
       "code": 43,
@@ -365,7 +449,9 @@
       "name_ar": "ميلة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 32,
+      "dairas_count": 13
     },
     {
       "code": 44,
@@ -373,7 +459,9 @@
       "name_ar": "عين الدفلى",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 36,
+      "dairas_count": 14
     },
     {
       "code": 45,
@@ -381,7 +469,9 @@
       "name_ar": "النعامة",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 12,
+      "dairas_count": 7
     },
     {
       "code": 46,
@@ -389,7 +479,9 @@
       "name_ar": "عين تموشنت",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 28,
+      "dairas_count": 8
     },
     {
       "code": 47,
@@ -397,7 +489,9 @@
       "name_ar": "غرداية",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 10,
+      "dairas_count": 8
     },
     {
       "code": 48,
@@ -405,7 +499,9 @@
       "name_ar": "غليزان",
       "mother_code": null,
       "created": 1984,
-      "law": null
+      "law": null,
+      "communes_count": 38,
+      "dairas_count": 13
     },
     {
       "code": 49,
@@ -413,7 +509,9 @@
       "name_ar": "تيميمون",
       "mother_code": 1,
       "created": 2019,
-      "law": "Law 19-12"
+      "law": "Law 19-12",
+      "communes_count": 10,
+      "dairas_count": 4
     },
     {
       "code": 50,
@@ -421,7 +519,9 @@
       "name_ar": "برج باجي مختار",
       "mother_code": 1,
       "created": 2019,
-      "law": "Law 19-12"
+      "law": "Law 19-12",
+      "communes_count": 2,
+      "dairas_count": 1
     },
     {
       "code": 51,
@@ -429,7 +529,9 @@
       "name_ar": "أولاد جلال",
       "mother_code": 7,
       "created": 2019,
-      "law": "Law 19-12"
+      "law": "Law 19-12",
+      "communes_count": 6,
+      "dairas_count": 2
     },
     {
       "code": 52,
@@ -437,7 +539,9 @@
       "name_ar": "بني عباس",
       "mother_code": 8,
       "created": 2019,
-      "law": "Law 19-12"
+      "law": "Law 19-12",
+      "communes_count": 10,
+      "dairas_count": 6
     },
     {
       "code": 53,
@@ -445,7 +549,9 @@
       "name_ar": "عين صالح",
       "mother_code": 11,
       "created": 2019,
-      "law": "Law 19-12"
+      "law": "Law 19-12",
+      "communes_count": 3,
+      "dairas_count": 2
     },
     {
       "code": 54,
@@ -453,7 +559,9 @@
       "name_ar": "عين قزام",
       "mother_code": 11,
       "created": 2019,
-      "law": "Law 19-12"
+      "law": "Law 19-12",
+      "communes_count": 2,
+      "dairas_count": 2
     },
     {
       "code": 55,
@@ -461,7 +569,9 @@
       "name_ar": "توقرت",
       "mother_code": 30,
       "created": 2019,
-      "law": "Law 19-12"
+      "law": "Law 19-12",
+      "communes_count": 13,
+      "dairas_count": 6
     },
     {
       "code": 56,
@@ -469,7 +579,9 @@
       "name_ar": "جانت",
       "mother_code": 33,
       "created": 2019,
-      "law": "Law 19-12"
+      "law": "Law 19-12",
+      "communes_count": 2,
+      "dairas_count": 1
     },
     {
       "code": 57,
@@ -477,7 +589,9 @@
       "name_ar": "المغير",
       "mother_code": 39,
       "created": 2019,
-      "law": "Law 19-12"
+      "law": "Law 19-12",
+      "communes_count": 8,
+      "dairas_count": 2
     },
     {
       "code": 58,
@@ -485,7 +599,9 @@
       "name_ar": "المنيعة",
       "mother_code": 47,
       "created": 2019,
-      "law": "Law 19-12"
+      "law": "Law 19-12",
+      "communes_count": 3,
+      "dairas_count": 1
     },
     {
       "code": 59,
@@ -493,7 +609,9 @@
       "name_ar": "آفلو",
       "mother_code": 3,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 12,
+      "dairas_count": 5
     },
     {
       "code": 60,
@@ -501,7 +619,9 @@
       "name_ar": "بريكة",
       "mother_code": 5,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 8,
+      "dairas_count": 4
     },
     {
       "code": 61,
@@ -509,7 +629,9 @@
       "name_ar": "القنطرة",
       "mother_code": 7,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 5,
+      "dairas_count": 3
     },
     {
       "code": 62,
@@ -517,7 +639,9 @@
       "name_ar": "بئر العاتر",
       "mother_code": 12,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 4,
+      "dairas_count": 2
     },
     {
       "code": 63,
@@ -525,7 +649,9 @@
       "name_ar": "العريشة",
       "mother_code": 13,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 4,
+      "dairas_count": 2
     },
     {
       "code": 64,
@@ -533,7 +659,9 @@
       "name_ar": "قصر الشلالة",
       "mother_code": 14,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 6,
+      "dairas_count": 3
     },
     {
       "code": 65,
@@ -541,7 +669,9 @@
       "name_ar": "عين وسارة",
       "mother_code": 17,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 10,
+      "dairas_count": 4
     },
     {
       "code": 66,
@@ -549,7 +679,9 @@
       "name_ar": "مسعد",
       "mother_code": 17,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 8,
+      "dairas_count": 4
     },
     {
       "code": 67,
@@ -557,7 +689,9 @@
       "name_ar": "قصر البخاري",
       "mother_code": 26,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 21,
+      "dairas_count": 6
     },
     {
       "code": 68,
@@ -565,7 +699,9 @@
       "name_ar": "بوسعادة",
       "mother_code": 28,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 23,
+      "dairas_count": 8
     },
     {
       "code": 69,
@@ -573,7 +709,9 @@
       "name_ar": "الأبيض سيدي الشيخ",
       "mother_code": 32,
       "created": 2025,
-      "law": "Law 26-06"
+      "law": "Law 26-06",
+      "communes_count": 7,
+      "dairas_count": 3
     }
   ]
 }

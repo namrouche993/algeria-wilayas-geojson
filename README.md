@@ -96,6 +96,16 @@ npm run derive           # regenerate derived-from-v69/{v48,v58}.geojson from v6
 npm run cross-validate   # compare them against v48/ and v58/
 ```
 
+**Live demo**: [`examples/map-demo.html`](examples/map-demo.html) is a
+self-contained interactive page (open it directly in a browser, no server
+needed) built entirely from `v69` + `wilaya-hierarchy.json` — a 48/58/69
+radio switch, choropleth by commune/daïra count, and a detail panel that
+shows any wilaya's status at all three resolutions at once (e.g. "mother of
+Ouled Djellal + El Kantara at 48, mother of El Kantara at 58, unchanged at
+69"). Regenerate it with `node scripts/build-map-demo-data.js`, then splice
+the output JSON into `scripts/map-demo-template.html` per that script's
+header comment.
+
 ## Scripts
 
 - `node scripts/count-features.js` — validates every version listed in
