@@ -31,7 +31,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 16,
-      "dairas_count": 6
+      "dairas_count": 6,
+      "name_en": "Adrar"
     },
     {
       "code": 2,
@@ -41,7 +42,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 35,
-      "dairas_count": 13
+      "dairas_count": 13,
+      "name_en": "Chlef"
     },
     {
       "code": 3,
@@ -51,7 +53,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 12,
-      "dairas_count": 5
+      "dairas_count": 5,
+      "name_en": "Laghouat"
     },
     {
       "code": 4,
@@ -61,7 +64,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 29,
-      "dairas_count": 12
+      "dairas_count": 12,
+      "name_en": "Oum El Bouaghi"
     },
     {
       "code": 5,
@@ -71,7 +75,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 53,
-      "dairas_count": 18
+      "dairas_count": 18,
+      "name_en": "Batna"
     },
     {
       "code": 6,
@@ -81,7 +86,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 52,
-      "dairas_count": 19
+      "dairas_count": 19,
+      "name_en": "Béjaïa"
     },
     {
       "code": 7,
@@ -91,7 +97,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 22,
-      "dairas_count": 7
+      "dairas_count": 7,
+      "name_en": "Biskra"
     },
     {
       "code": 8,
@@ -101,7 +108,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 11,
-      "dairas_count": 6
+      "dairas_count": 6,
+      "name_en": "Béchar"
     },
     {
       "code": 9,
@@ -111,7 +119,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 25,
-      "dairas_count": 10
+      "dairas_count": 10,
+      "name_en": "Blida"
     },
     {
       "code": 10,
@@ -121,7 +130,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 45,
-      "dairas_count": 12
+      "dairas_count": 12,
+      "name_en": "Bouira"
     },
     {
       "code": 11,
@@ -131,7 +141,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 5,
-      "dairas_count": 3
+      "dairas_count": 3,
+      "name_en": "Tamanrasset"
     },
     {
       "code": 12,
@@ -141,7 +152,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 24,
-      "dairas_count": 10
+      "dairas_count": 10,
+      "name_en": "Tébessa"
     },
     {
       "code": 13,
@@ -151,7 +163,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 49,
-      "dairas_count": 19
+      "dairas_count": 19,
+      "name_en": "Tlemcen"
     },
     {
       "code": 14,
@@ -161,7 +174,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 36,
-      "dairas_count": 12
+      "dairas_count": 12,
+      "name_en": "Tiaret"
     },
     {
       "code": 15,
@@ -171,7 +185,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 67,
-      "dairas_count": 21
+      "dairas_count": 21,
+      "name_en": "Tizi Ouzou"
     },
     {
       "code": 16,
@@ -181,7 +196,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 57,
-      "dairas_count": 13
+      "dairas_count": 13,
+      "name_en": "Algiers"
     },
     {
       "code": 17,
@@ -191,7 +207,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 18,
-      "dairas_count": 6
+      "dairas_count": 6,
+      "name_en": "Djelfa"
     },
     {
       "code": 18,
@@ -201,7 +218,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 28,
-      "dairas_count": 11
+      "dairas_count": 11,
+      "name_en": "Jijel"
     },
     {
       "code": 19,
@@ -211,7 +229,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 60,
-      "dairas_count": 20
+      "dairas_count": 20,
+      "name_en": "Sétif"
     },
     {
       "code": 20,
@@ -221,7 +240,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 16,
-      "dairas_count": 6
+      "dairas_count": 6,
+      "name_en": "Saïda"
     },
     {
       "code": 21,
@@ -231,7 +251,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 38,
-      "dairas_count": 13
+      "dairas_count": 13,
+      "name_en": "Skikda"
     },
     {
       "code": 22,
@@ -241,7 +262,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 52,
-      "dairas_count": 15
+      "dairas_count": 15,
+      "name_en": "Sidi Bel Abbès"
     },
     {
       "code": 23,
@@ -251,7 +273,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 12,
-      "dairas_count": 6
+      "dairas_count": 6,
+      "name_en": "Annaba"
     },
     {
       "code": 24,
@@ -261,7 +284,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 34,
-      "dairas_count": 10
+      "dairas_count": 10,
+      "name_en": "Guelma"
     },
     {
       "code": 25,
@@ -271,7 +295,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 12,
-      "dairas_count": 7
+      "dairas_count": 7,
+      "name_en": "Constantine"
     },
     {
       "code": 26,
@@ -281,7 +306,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 43,
-      "dairas_count": 13
+      "dairas_count": 13,
+      "name_en": "Médéa"
     },
     {
       "code": 27,
@@ -291,7 +317,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 32,
-      "dairas_count": 10
+      "dairas_count": 10,
+      "name_en": "Mostaganem"
     },
     {
       "code": 28,
@@ -301,7 +328,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 24,
-      "dairas_count": 7
+      "dairas_count": 7,
+      "name_en": "M'sila"
     },
     {
       "code": 29,
@@ -311,7 +339,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 47,
-      "dairas_count": 16
+      "dairas_count": 16,
+      "name_en": "Mascara"
     },
     {
       "code": 30,
@@ -321,7 +350,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 8,
-      "dairas_count": 5
+      "dairas_count": 5,
+      "name_en": "Ouargla"
     },
     {
       "code": 31,
@@ -331,7 +361,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 26,
-      "dairas_count": 9
+      "dairas_count": 9,
+      "name_en": "Oran"
     },
     {
       "code": 32,
@@ -341,7 +372,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 15,
-      "dairas_count": 5
+      "dairas_count": 5,
+      "name_en": "El Bayadh"
     },
     {
       "code": 33,
@@ -351,7 +383,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 4,
-      "dairas_count": 4
+      "dairas_count": 4,
+      "name_en": "Illizi"
     },
     {
       "code": 34,
@@ -361,7 +394,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 34,
-      "dairas_count": 10
+      "dairas_count": 10,
+      "name_en": "Bordj Bou Arreridj"
     },
     {
       "code": 35,
@@ -371,7 +405,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 32,
-      "dairas_count": 9
+      "dairas_count": 9,
+      "name_en": "Boumerdès"
     },
     {
       "code": 36,
@@ -381,7 +416,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 24,
-      "dairas_count": 7
+      "dairas_count": 7,
+      "name_en": "El Tarf"
     },
     {
       "code": 37,
@@ -391,7 +427,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 2,
-      "dairas_count": 1
+      "dairas_count": 1,
+      "name_en": "Tindouf"
     },
     {
       "code": 38,
@@ -401,7 +438,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 22,
-      "dairas_count": 8
+      "dairas_count": 8,
+      "name_en": "Tissemsilt"
     },
     {
       "code": 39,
@@ -411,7 +449,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 22,
-      "dairas_count": 10
+      "dairas_count": 10,
+      "name_en": "El Oued"
     },
     {
       "code": 40,
@@ -421,7 +460,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 21,
-      "dairas_count": 8
+      "dairas_count": 8,
+      "name_en": "Khenchela"
     },
     {
       "code": 41,
@@ -431,7 +471,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 26,
-      "dairas_count": 10
+      "dairas_count": 10,
+      "name_en": "Souk Ahras"
     },
     {
       "code": 42,
@@ -441,7 +482,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 28,
-      "dairas_count": 10
+      "dairas_count": 10,
+      "name_en": "Tipaza"
     },
     {
       "code": 43,
@@ -451,7 +493,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 32,
-      "dairas_count": 13
+      "dairas_count": 13,
+      "name_en": "Mila"
     },
     {
       "code": 44,
@@ -461,7 +504,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 36,
-      "dairas_count": 14
+      "dairas_count": 14,
+      "name_en": "Aïn Defla"
     },
     {
       "code": 45,
@@ -471,7 +515,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 12,
-      "dairas_count": 7
+      "dairas_count": 7,
+      "name_en": "Naâma"
     },
     {
       "code": 46,
@@ -481,7 +526,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 28,
-      "dairas_count": 8
+      "dairas_count": 8,
+      "name_en": "Aïn Témouchent"
     },
     {
       "code": 47,
@@ -491,7 +537,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 10,
-      "dairas_count": 8
+      "dairas_count": 8,
+      "name_en": "Ghardaïa"
     },
     {
       "code": 48,
@@ -501,7 +548,8 @@
       "created": 1984,
       "law": null,
       "communes_count": 38,
-      "dairas_count": 13
+      "dairas_count": 13,
+      "name_en": "Relizane"
     },
     {
       "code": 49,
@@ -511,7 +559,8 @@
       "created": 2019,
       "law": "Law 19-12",
       "communes_count": 10,
-      "dairas_count": 4
+      "dairas_count": 4,
+      "name_en": "Timimoun"
     },
     {
       "code": 50,
@@ -521,7 +570,8 @@
       "created": 2019,
       "law": "Law 19-12",
       "communes_count": 2,
-      "dairas_count": 1
+      "dairas_count": 1,
+      "name_en": "Bordj Badji Mokhtar"
     },
     {
       "code": 51,
@@ -531,7 +581,8 @@
       "created": 2019,
       "law": "Law 19-12",
       "communes_count": 6,
-      "dairas_count": 2
+      "dairas_count": 2,
+      "name_en": "Ouled Djellal"
     },
     {
       "code": 52,
@@ -541,7 +592,8 @@
       "created": 2019,
       "law": "Law 19-12",
       "communes_count": 10,
-      "dairas_count": 6
+      "dairas_count": 6,
+      "name_en": "Béni Abbès"
     },
     {
       "code": 53,
@@ -551,7 +603,8 @@
       "created": 2019,
       "law": "Law 19-12",
       "communes_count": 3,
-      "dairas_count": 2
+      "dairas_count": 2,
+      "name_en": "In Salah"
     },
     {
       "code": 54,
@@ -561,7 +614,8 @@
       "created": 2019,
       "law": "Law 19-12",
       "communes_count": 2,
-      "dairas_count": 2
+      "dairas_count": 2,
+      "name_en": "In Guezzam"
     },
     {
       "code": 55,
@@ -571,7 +625,8 @@
       "created": 2019,
       "law": "Law 19-12",
       "communes_count": 13,
-      "dairas_count": 6
+      "dairas_count": 6,
+      "name_en": "Touggourt"
     },
     {
       "code": 56,
@@ -581,7 +636,8 @@
       "created": 2019,
       "law": "Law 19-12",
       "communes_count": 2,
-      "dairas_count": 1
+      "dairas_count": 1,
+      "name_en": "Djanet"
     },
     {
       "code": 57,
@@ -591,7 +647,8 @@
       "created": 2019,
       "law": "Law 19-12",
       "communes_count": 8,
-      "dairas_count": 2
+      "dairas_count": 2,
+      "name_en": "El M'Ghair"
     },
     {
       "code": 58,
@@ -601,7 +658,8 @@
       "created": 2019,
       "law": "Law 19-12",
       "communes_count": 3,
-      "dairas_count": 1
+      "dairas_count": 1,
+      "name_en": "El Meniaa"
     },
     {
       "code": 59,
@@ -611,7 +669,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 12,
-      "dairas_count": 5
+      "dairas_count": 5,
+      "name_en": "Aflou"
     },
     {
       "code": 60,
@@ -621,7 +680,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 8,
-      "dairas_count": 4
+      "dairas_count": 4,
+      "name_en": "Barika"
     },
     {
       "code": 61,
@@ -631,7 +691,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 5,
-      "dairas_count": 3
+      "dairas_count": 3,
+      "name_en": "El Kantara"
     },
     {
       "code": 62,
@@ -641,7 +702,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 4,
-      "dairas_count": 2
+      "dairas_count": 2,
+      "name_en": "Bir El Ater"
     },
     {
       "code": 63,
@@ -651,7 +713,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 4,
-      "dairas_count": 2
+      "dairas_count": 2,
+      "name_en": "El Aricha"
     },
     {
       "code": 64,
@@ -661,7 +724,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 6,
-      "dairas_count": 3
+      "dairas_count": 3,
+      "name_en": "Ksar Chellala"
     },
     {
       "code": 65,
@@ -671,7 +735,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 10,
-      "dairas_count": 4
+      "dairas_count": 4,
+      "name_en": "Aïn Oussera"
     },
     {
       "code": 66,
@@ -681,7 +746,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 8,
-      "dairas_count": 4
+      "dairas_count": 4,
+      "name_en": "Messaad"
     },
     {
       "code": 67,
@@ -691,7 +757,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 21,
-      "dairas_count": 6
+      "dairas_count": 6,
+      "name_en": "Ksar El Boukhari"
     },
     {
       "code": 68,
@@ -701,7 +768,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 23,
-      "dairas_count": 8
+      "dairas_count": 8,
+      "name_en": "Bou Saâda"
     },
     {
       "code": 69,
@@ -711,7 +779,8 @@
       "created": 2025,
       "law": "Law 26-06",
       "communes_count": 7,
-      "dairas_count": 3
+      "dairas_count": 3,
+      "name_en": "El Abiodh Sidi Cheikh"
     }
   ]
 }
